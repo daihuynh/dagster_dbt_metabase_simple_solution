@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_films
+    columns:
+      - name: film_id
+        tests:
+          - unique
+  - name: dim_plots
+    columns:
+      - name: plot_id
+        tests:
+          - unique
+  - name: fact_plots
+    columns:
+      - name: plot_id
+        tests:
+          - unique
+  - name: fact_films
+    columns:
+      - name: film_id
+        tests:
+          - unique

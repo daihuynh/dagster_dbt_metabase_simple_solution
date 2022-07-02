@@ -1,0 +1,66 @@
+version: 2
+
+sources:
+  - name: main
+    tags: ['raw']
+    tables:
+      - name: films
+        columns:
+          - name: tconst
+            data_type: string
+            description: alphanumeric unique identifier of the title
+          - name: titleType 
+            data_type: string
+            description: the type/format of the title (e.g. movie, short, tvseries, tvepisode, video, etc)
+          - name: primaryTitle 
+            data_type: string
+            description: the more popular title / the title used by the filmmakers on promotional materials at the point of release
+          - name: originalTitle 
+            data_type: string
+            description: original title, in the original language
+          - name: isAdult 
+            data_type: boolean
+            description: "0: non-adult title; 1: adult title"
+          - name: startYear
+            data_type: string (YYYY)
+            description: represents the release year of a title. In the case of TV Series, it is the series start year
+          - name: endYear 
+            data_type: string (YYYY)
+            description: TV Series end year. ‘\N’ for all other title types
+          - name: runtimeMinutes 
+            data_type: long
+            description: primary runtime of the title, in minutes
+          - name: genres 
+            data_type: string array
+            description: includes up to three genres associated with the title
+      - name: ratings
+        columns:
+          - name: tconst
+            data_type: string
+            description: alphanumeric unique identifier of the title
+          - name: averageRating  
+            data_type: float
+            description: weighted average of all the individual user ratings
+          - name: numVotes  
+            data_type: integer
+            description: number of votes the title has received
+      - name: plots
+        columns:
+          - name: nconst 
+            data_type: string
+            description: alphanumeric unique identifier of the title
+          - name: primaryName   
+            data_type: float
+            description: name by which the person is most often credited
+          - name: birthYear   
+            data_type: string
+            description: in YYYY format if applicable, else '\N'
+          - name: deathYear    
+            data_type: string
+            description: in YYYY format if applicable, else '\N'
+          - name: primaryProfession    
+            data_type: string array
+            description: the top-3 professions of the person
+          - name: knownForTitles    
+            data_type: string array
+            description: titles the person is known for

@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  bi:
+    image: metabase/metabase
+    restart: always
+    volumes:
+      - ./etl.db:/home/metabase/etl.db
+      - ./metabase:/metabase.db/
+    ports:
+      - 5000:3000

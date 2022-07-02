@@ -1,0 +1,11 @@
+{
+    "files.exclude": {
+        "**/__pycache__": true
+    },
+    "search.exclude": {
+        "**/.venv": true
+    },
+    "files.associations": {
+        "*.sql": "jinja-sql"
+    }
+}

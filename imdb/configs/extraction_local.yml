@@ -1,0 +1,8 @@
+ops:
+  op_download_data_files:
+    config:
+      file_list:
+        - "https://datasets.imdbws.com/name.basics.tsv.gz"
+        - "https://datasets.imdbws.com/title.basics.tsv.gz"
+        - "https://datasets.imdbws.com/title.ratings.tsv.gz"
+      store_path: "../../raw_files"

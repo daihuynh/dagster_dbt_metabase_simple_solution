@@ -1,0 +1,23 @@
+# Python
+.venv/
+**/__pycache__
+
+# Dagster
+tmp*/
+temporal/
+raw_files/
+*.db
+
+# DBT
+./imdb_dbt/dbt_packages/
+./imdb_dbt/target/
+
+# Metabase
+!metabase/*.db
+
+# Binary & Library files
+*.dll
+*.so
+
+
+**/logs/

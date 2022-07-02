@@ -1,0 +1,17 @@
+resources:
+  db_connection:
+    config:
+      # host: "localhost"
+      # port: "3306"
+      # username: "imdb"
+      # password: "maria"
+      # database: "dwh"
+      db_file: "staging.db"
+ops:
+  op_load_raw_files_to_db:
+    config:
+      store_path: "../../raw_files"
+      tables:
+        plots: name.basics.tsv
+        films: title.basics.tsv
+        ratings: title.ratings.tsv
