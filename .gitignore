@@ -2,6 +2,10 @@
 .venv/
 **/__pycache__
 
+# Binary & Library files
+*.dll
+*.so
+
 # Dagster
 tmp*/
 temporal/
@@ -11,13 +15,9 @@ raw_files/
 # DBT
 ./imdb_dbt/dbt_packages/
 ./imdb_dbt/target/
+!imdb_dbt/sqlite/crypto.dll
 
 # Metabase
 !metabase/*.db
-
-# Binary & Library files
-*.dll
-*.so
-
 
 **/logs/
